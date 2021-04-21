@@ -26,7 +26,7 @@ const PictureChoice = prevProps => {
         />
       </form> */}
       <div>
-        <p>or select image</p>
+        <p>Select image: </p>
         {pictures.map((picture, i) => (
           <div key={i}>
             <img

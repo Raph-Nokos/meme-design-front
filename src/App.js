@@ -9,16 +9,15 @@ import PictureChoice from './components/PictureChoice'
 import TextChoice from './components/TextChoice'
 
 function App() {
-  const [userTemplate, setUserTemplate] = useState('')
   return (
     <div className='App'>
       <Header />
       <Switch>
         <Route exact path='/'>
-          <Home setUserTemplate={setUserTemplate} />
+          <Home />
         </Route>
         <Route path='/creation'>
-          <Creation userTemplate={userTemplate} />
+          <Creation />
         </Route>
         <Route path='/picture'>
           <PictureChoice />
