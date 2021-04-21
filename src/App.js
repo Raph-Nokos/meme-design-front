@@ -1,15 +1,31 @@
 import './App.css'
 import { Route, Switch } from 'react-router-dom'
+import { useState } from 'react'
 
 import Header from './components/Header'
 import Home from './screens/Home'
+import Creation from './screens/Creation'
+import PictureChoice from './components/PictureChoice'
+import TextChoice from './components/TextChoice'
 
 function App() {
+  const [userTemplate, setUserTemplate] = useState('')
   return (
     <div className='App'>
-      <Header/>
+      <Header />
       <Switch>
-        <Route path='/' component={Home} />
+        <Route exact path='/'>
+          <Home setUserTemplate={setUserTemplate} />
+        </Route>
+        <Route path='/creation'>
+          <Creation userTemplate={userTemplate} />
+        </Route>
+        <Route path='/picture'>
+          <PictureChoice />
+        </Route>
+        <Route path='/text'>
+          <TextChoice />
+        </Route>
       </Switch>
     </div>
   )

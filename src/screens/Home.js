@@ -1,20 +1,17 @@
 import React from 'react'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import './Home.css'
 
 import imgMeme from '../website-img/dog-meme.jpg'
 
-const Home = () => {
-  const [template, setTemplate] = useState('')
-
-  const handleChange = (event, imgMeme) => {
-    setTemplate(imgMeme)
+const Home = prevProps => {
+  const handleChange = id => {
+    prevProps.setUserTemplate(id)
   }
 
   const handleSubmit = event => {
-    alert('Votre template est : ' + template.value)
+    // alert('Votre template est : ' + template.value)
     event.preventDefault()
   }
   return (
@@ -34,33 +31,36 @@ const Home = () => {
           <label>Select a model :</label>
 
           <img
-            onClick={e => handleChange(e, imgMeme)}
+            onClick={e => handleChange(e.target.id)}
             className='img-select'
             src={imgMeme}
             alt='one template'
+            id='1'
           />
           <img
-            onClick={handleChange}
+            onClick={e => handleChange(e.target.id)}
             className='img-select'
             src={imgMeme}
             alt='one template'
+            id='2'
           />
           <img
-            onClick={handleChange}
+            onClick={e => handleChange(e.target.id)}
             className='img-select'
             src={imgMeme}
             alt='one template'
+            id='3'
           />
           <img
-            onClick={handleChange}
+            onClick={e => handleChange(e.target.id)}
             className='img-select'
             src={imgMeme}
             alt='one template'
+            id='4'
           />
           <div>
             <Link
               className='next-step'
-              key={template}
               to={{
                 pathname: `/creation`
               }}
