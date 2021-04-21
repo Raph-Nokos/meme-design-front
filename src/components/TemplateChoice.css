@@ -1,0 +1,92 @@
+.bottom{
+    position:absolute;
+    top:260px; 
+    width:300px; 
+    margin: 0;
+    z-index: 100;
+}
+.caption1{
+    position:absolute;
+    top:0px; 
+    margin: 0;
+    width:290px;  
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    background-color: white; 
+    font-size: 18px;
+    height: 40px;
+    text-align: left;
+    padding: 5px;
+}
+.caption2{
+    font-family: 'Impact';
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .1rem;
+    font-size: 26px;
+    height: 40px;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+.caption3{
+    font-family: 'Impact';
+    text-transform: uppercase;
+    color: white;
+    background-color: black;
+    letter-spacing: .1rem;
+    font-size: 26px;
+    height: 40px;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+}
+
+.caption4{
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    height: 40px;
+    padding-top: 5px;
+}
+.img-select{
+    width: 300px;
+    height: 300px;
+    position:absolute;
+    left: 0;
+    top: 0;  
+}
+
+.select-template{
+    background-color: #D9D5D2;
+    width: 100%;
+    padding: 20px;
+}
+
+.text-select{
+    font-family: 'Impact';
+    font-size: 26px;
+    letter-spacing: 1px;
+}
+
+.one-template{
+    position:relative; 
+    height:300px;
+    width: 300px;
+    border: 1px solid grey;
+    box-shadow:  0px 0px 15px #4e4e4e65;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.templates{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.top{
+    position:absolute;
+    top:0px; 
+    margin: 0;
+    width:300px;  
+    z-index: 100; 
+}

@@ -1,3 +1,5 @@
+import './TemplateChoice.css'
+
 import imgMeme from '../website-img/dog-meme.jpg'
 
 const TemplateChoice = prevProps => {
@@ -6,23 +8,52 @@ const TemplateChoice = prevProps => {
   }
   return (
     <div className='select-template'>
-      <h2>Select a model :</h2>
-
-      <img
-        onClick={e => handleChange(e.target.id)}
-        className='img-select'
-        src={imgMeme}
-        alt='one template'
-        id='1'
-      />
-      <img
-        onClick={e => handleChange(e.target.id)}
-        className='img-select'
-        src={imgMeme}
-        alt='one template'
-        id='2'
-      />
-      <img
+      <h2 className='text-select'>Select a model</h2>
+      <div className='templates'>
+        <div className='one-template'>
+          <p className='caption1'>Caption This</p>
+          <img
+            onClick={e => handleChange(e.target.id)}
+            className='img-select'
+            src={imgMeme}
+            alt='one template'
+            id='1'
+          />
+        </div>
+        <div className='one-template'>
+          <p className='top caption2'>Caption This</p>
+          <img
+            onClick={e => handleChange(e.target.id)}
+            className='img-select'
+            src={imgMeme}
+            alt='one template'
+            id='2'
+          />
+          <p className='bottom caption2'>Caption This</p>
+        </div>
+        <div className='one-template'>
+          <p className='top caption3'>Caption This</p>
+          <img
+            onClick={e => handleChange(e.target.id)}
+            className='img-select'
+            src={imgMeme}
+            alt='one template'
+            id='3'
+          />
+          <p className='bottom caption3'>Caption This</p>
+        </div>
+        <div className='one-template'>
+          <img
+            onClick={e => handleChange(e.target.id)}
+            className='img-select'
+            src={imgMeme}
+            alt='one template'
+            id='4'
+          />
+           <p className='bottom caption4'>Caption This</p>
+        </div>
+      </div>
+      {/* <img
         onClick={e => handleChange(e.target.id)}
         className='img-select'
         src={imgMeme}
@@ -35,7 +66,7 @@ const TemplateChoice = prevProps => {
         src={imgMeme}
         alt='one template'
         id='4'
-      />
+      /> */}
     </div>
   )
 }

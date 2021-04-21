@@ -1,0 +1,10 @@
+#site-name{
+    font-family: 'Impact';
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: .1rem;
+    font-size: 50px;
+    padding: 40px;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px;
+
+}

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 
+import './PictureChoice.css'
+
 const PictureChoice = prevProps => {
   const [pictures, setPictures] = useState([])
 
@@ -26,15 +28,16 @@ const PictureChoice = prevProps => {
         />
       </form> */}
       <div>
-        <p>Select image: </p>
-        {pictures.map((picture, i) => (
-          <div key={i}>
+        <h2 className='text-select'>Select a picture </h2>
+        <div className='pictures-container'>
+          {pictures.map(picture => (
             <img
+              className='picture'
               onClick={() => handleChange(picture.img_url)}
               src={picture.img_url}
             />
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   )

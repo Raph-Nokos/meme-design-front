@@ -9,7 +9,7 @@ const Home = () => {
   return (
     <div id='home-page'>
       <div className='intro'>
-        <div>
+        <div className='texte-intro'>
           <p>Make your own meme !</p>
           <p>
             Choose your template, use the picture of your choice and change the
@@ -25,7 +25,7 @@ const Home = () => {
           pathname: `/creation`
         }}
       >
-        Ok
+        Let's go !
       </Link>
     </div>
   )
