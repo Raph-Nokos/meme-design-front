@@ -15,7 +15,7 @@ const PictureChoice = prevProps => {
   }, [])
 
   return (
-    <div>
+    <div className='select-picture'>
       {/* <form onSubmit=''>
         <h1 id='title-add-recipe'>Choose a picture</h1>
         <label>Copy image url :</label>

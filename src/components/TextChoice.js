@@ -1,3 +1,5 @@
+import './TextChoice.css'
+
 const TextChoice = prevProps => {
   const handleChangeTop = caption => {
     prevProps.setCaptionTop(caption)
@@ -8,7 +10,7 @@ const TextChoice = prevProps => {
   return (
     <div>
       <form onSubmit=''>
-        <h1 id='title-add-recipe'>Write your caption</h1>
+        <h2 id='text-select'>Write your caption</h2>
         <label>Caption top:</label>
         <input
           type='text'
