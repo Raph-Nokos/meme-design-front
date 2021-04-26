@@ -1,3 +1,20 @@
+.add-picture{
+    padding-top : 40px;
+}
+
+.button-delete{
+    width: 40px;
+    align-self: center;
+}
+#img-trash{
+    width: 25px;
+}
+
+.image-and-delete{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 .pictures-container{
     display: flex;
     flex-wrap: wrap;
@@ -5,7 +22,7 @@
 }
 
 .picture{
-    max-width: 400px;
+    max-width: 300px;
     margin: 20px;
 }
 

@@ -3,11 +3,25 @@ import axios from 'axios'
 
 import './PictureChoice.css'
 
+import Delete from '../website-img/trash-bin.png'
+
 const PictureChoice = prevProps => {
   const [pictures, setPictures] = useState([])
+  const [imgUrl, setImgUrl] = useState('')
 
   const handleChange = picture => {
     prevProps.setUserChoice(picture)
+  }
+
+  const addPicture = () => {
+    let newPicture = {
+      img_url: imgUrl
+    }
+    axios.post('http://localhost:4242/images', newPicture)
+  }
+
+  const deletePicture = id => {
+    axios.delete(`http://localhost:4242/images/${id}`)
   }
 
   useEffect(() => {
@@ -16,29 +30,37 @@ const PictureChoice = prevProps => {
 
   return (
     <div className='select-picture'>
-      {/* <form onSubmit=''>
-        <h1 id='title-add-recipe'>Choose a picture</h1>
-        <label>Copy image url :</label>
-        <input
-          type='text'
-          id='name-categorie-input'
-          placeholder='Pois chiche'
-          name='name'
-          onChange={event => setImgUrl(event.target.value)}
-        />
-      </form> */}
       <div>
         <h2 className='text-select'>Select a picture </h2>
         <div className='pictures-container'>
           {pictures.map(picture => (
-            <img
-              className='picture'
-              onClick={() => handleChange(picture.img_url)}
-              src={picture.img_url}
-            />
+            <div key={picture.id} className='image-and-delete'>
+              <img
+                className='picture'
+                onClick={() => handleChange(picture.img_url)}
+                src={picture.img_url}
+              />
+              <button
+                className='button-delete'
+                onClick={() => deletePicture(picture.id)}
+              >
+                <img id='img-trash' alt='supprimer' src={Delete} />
+              </button>
+            </div>
           ))}
         </div>
       </div>
+      <form className='add-picture' onSubmit={addPicture}>
+        <h2 className='text-select'>or add a picture</h2>
+        <input
+          type='text'
+          id='img-url'
+          placeholder='Copy image url'
+          name='name'
+          onChange={event => setImgUrl(event.target.value)}
+        />
+        <button type='submit'>OK</button>
+      </form>
     </div>
   )
 }

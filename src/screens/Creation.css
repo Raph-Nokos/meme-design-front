@@ -1,6 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+.creation-container{
+    padding: 30px;
+    width: 100%; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
 .creation-montage{
+    align-self: center;
     position:relative; 
     height:300px;
     width: 300px;
@@ -10,6 +18,15 @@
 
 #invisible-caption{
     display: none;
+}
+
+.invisible-creation{
+    display: none;
+}
+
+.meme-done{
+    font-family: 'Impact';
+    font-size: 26px;
 }
 .photo-choisie{
 position:absolute;
