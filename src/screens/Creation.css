@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+
+
 .creation-container{
     padding: 30px;
     width: 100%; 
@@ -7,7 +9,7 @@
     justify-content: center;
     flex-direction: column;
 }
-.creation-montage{
+#creation-montage{
     align-self: center;
     position:relative; 
     height:300px;
@@ -35,6 +37,7 @@ width: 300px;
 left: 0;
 top: 0}
 
+
 #texte-bottom{
 position:absolute;
 top:260px; 
@@ -43,7 +46,22 @@ margin: 0;
 z-index: 100;
 }
 
+.save-image{
+    cursor: pointer;
+    font-family: 'Impact';
+    text-transform: uppercase;
+    color: black;
+    font-size: 22px;
+    padding: 15px;
+    width: 150px;
+    margin: 20px;
+    align-self: center;
 
+}
+.save-image:hover,
+.save-image:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
 
 .template1{
     font-family: 'Montserrat', sans-serif;

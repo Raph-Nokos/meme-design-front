@@ -2,6 +2,8 @@ import PictureChoice from '../components/PictureChoice'
 import TextChoice from '../components/TextChoice'
 import TemplateChoice from '../components/TemplateChoice'
 import { useState } from 'react'
+import domtoimage from 'dom-to-image'
+
 import './Creation.css'
 
 const Creation = () => {
@@ -36,6 +38,17 @@ const Creation = () => {
       return 'texte-bottom'
     }
   }
+  const saveImage = () => {
+    domtoimage
+      .toJpeg(document.getElementById('creation-montage'), { quality: 0.95 })
+      .then(function (dataUrl) {
+        var link = document.createElement('a')
+        link.download = 'my-image-name.jpeg'
+        link.href = dataUrl
+        link.click()
+      })
+  }
+
   return (
     <div>
       <TemplateChoice setUserTemplate={setUserTemplate} />
@@ -50,7 +63,7 @@ const Creation = () => {
         }
       >
         <h2 className='meme-done'>Your creation</h2>
-        <div className='creation-montage'>
+        <div id='creation-montage'>
           <p id={texteTop()} className={captionTemplate()}>
             {captionTop}
           </p>
@@ -59,6 +72,9 @@ const Creation = () => {
             {captionBottom}
           </p>
         </div>
+        <button className='save-image' onClick={saveImage}>
+          Download
+        </button>
       </div>
     </div>
   )
