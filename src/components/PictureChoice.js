@@ -38,7 +38,9 @@ const PictureChoice = prevProps => {
           {pictures.map(picture => (
             <div key={picture.id} className='image-and-delete'>
               <img
-                className={selected === picture.img_url ? 'selected-picture' : 'picture'}
+                className={
+                  selected === picture.img_url ? 'selected-picture' : 'picture'
+                }
                 onClick={() => handleChange(picture.img_url)}
                 src={picture.img_url}
               />

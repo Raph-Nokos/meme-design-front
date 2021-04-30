@@ -1,5 +1,5 @@
 import './TemplateChoice.css'
-import {useState} from 'react'
+import { useState } from 'react'
 
 import imgMeme from '../website-img/dog-meme.jpg'
 
@@ -53,7 +53,7 @@ const TemplateChoice = prevProps => {
             alt='one template'
             id='4'
           />
-           <p className='bottom caption4'>Caption This</p>
+          <p className='bottom caption4'>Caption This</p>
         </div>
       </div>
       {/* <img
