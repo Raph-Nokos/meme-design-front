@@ -8,9 +8,11 @@ import Delete from '../website-img/trash-bin.png'
 const PictureChoice = prevProps => {
   const [pictures, setPictures] = useState([])
   const [imgUrl, setImgUrl] = useState('')
+  const [selected, setSelected] = useState('')
 
   const handleChange = picture => {
     prevProps.setUserChoice(picture)
+    setSelected(picture)
   }
 
   const addPicture = () => {
@@ -36,7 +38,7 @@ const PictureChoice = prevProps => {
           {pictures.map(picture => (
             <div key={picture.id} className='image-and-delete'>
               <img
-                className='picture'
+                className={selected === picture.img_url ? 'selected-picture' : 'picture'}
                 onClick={() => handleChange(picture.img_url)}
                 src={picture.img_url}
               />

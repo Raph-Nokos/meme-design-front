@@ -24,9 +24,16 @@
 .picture{
     max-width: 300px;
     margin: 20px;
+    cursor: pointer;
 }
 
 .select-picture{
     width: 100%;
     padding-top: 30px;
+}
+
+.selected-picture{
+    border: 3px solid #88BFAB;
+    max-width: 300px;
+    margin: 20px;
 }

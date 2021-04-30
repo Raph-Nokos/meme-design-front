@@ -1,16 +1,19 @@
 import './TemplateChoice.css'
+import {useState} from 'react'
 
 import imgMeme from '../website-img/dog-meme.jpg'
 
 const TemplateChoice = prevProps => {
+  const [template, setTemplate] = useState('')
   const handleChange = id => {
     prevProps.setUserTemplate(id)
+    setTemplate(id)
   }
   return (
     <div className='select-template'>
       <h2 className='text-select'>Select a model</h2>
       <div className='templates'>
-        <div className='one-template'>
+        <div className={template === '1' ? 'selected' : 'one-template'}>
           <p className='caption1'>Caption This</p>
           <img
             onClick={e => handleChange(e.target.id)}
@@ -20,7 +23,7 @@ const TemplateChoice = prevProps => {
             id='1'
           />
         </div>
-        <div className='one-template'>
+        <div className={template === '2' ? 'selected' : 'one-template'}>
           <p className='top caption2'>Caption This</p>
           <img
             onClick={e => handleChange(e.target.id)}
@@ -31,7 +34,7 @@ const TemplateChoice = prevProps => {
           />
           <p className='bottom caption2'>Caption This</p>
         </div>
-        <div className='one-template'>
+        <div className={template === '3' ? 'selected' : 'one-template'}>
           <p className='top caption3'>Caption This</p>
           <img
             onClick={e => handleChange(e.target.id)}
@@ -42,7 +45,7 @@ const TemplateChoice = prevProps => {
           />
           <p className='bottom caption3'>Caption This</p>
         </div>
-        <div className='one-template'>
+        <div className={template === '4' ? 'selected' : 'one-template'}>
           <img
             onClick={e => handleChange(e.target.id)}
             className='img-select'
